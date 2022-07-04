@@ -36,7 +36,7 @@ import org.openqa.selenium.WebDriver;
         @And("enters: {string} and {string}")
         public void entersUsernameAndPassword(String username , String password) {
             context.loginPagePOM.loginForm (username , password);
-            driver.close ();
+//            driver.close ();
         }
 
 
@@ -53,7 +53,7 @@ import org.openqa.selenium.WebDriver;
             ProductsPagePOM productsPagePOM = new ProductsPagePOM(Context.driver);
             Assert.assertEquals("The page title is not the expected one",
                     "Products".toLowerCase(), productsPagePOM.getPageTitle().toLowerCase());
-            driver.close ();
+//            driver.close ();
         }
 
         @When("provides username: {string} and password: {string}}")
@@ -68,13 +68,13 @@ import org.openqa.selenium.WebDriver;
             ProductsPagePOM shopPagePOM = new ProductsPagePOM(Context.driver);
             Assert.assertEquals("The page title is not the expected one",
                     "Products".toLowerCase(), shopPagePOM.getPageTitle().toLowerCase());
-            driver.close ();
+//            driver.close ();
         }
 
 
         @When("provides username: {string} and password: {string}")
         public void providesUsernameAndPassword(String username , String password) {
             context.loginPagePOM.loginForm ("standard_user", "secret_sauce");
-            driver.close ();
+//            driver.close ();
         }
     }

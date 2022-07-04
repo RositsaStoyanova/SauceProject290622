@@ -36,7 +36,7 @@ public class ProductPageSteps {
             context.loginPagePOM.load();
             context.loginPagePOM.loginForm ("standard_user", "secret_sauce");
             Context.productsPagePOM.isLoaded();
-            driver.close();
+//            driver.close();
         }
 
         @And("the client adds the following items to the cart:")
@@ -49,7 +49,7 @@ public class ProductPageSteps {
                 }
             }
             context.items = items;
-            driver.close();
+//            driver.close();
         }
 
         @And("the client navigates to the Checkout Page")
@@ -60,7 +60,7 @@ public class ProductPageSteps {
             CheckoutPersonalInfo checkoutPersonalInfo = new CheckoutPersonalInfo(Context.driver);
             checkoutPersonalInfo.populateRequiredFields();
             checkoutPersonalInfo.clickContinueButton();
-            driver.close ();
+//            driver.close ();
         }
 
         @Then("all items are successfully added")
@@ -72,7 +72,7 @@ public class ProductPageSteps {
                 if (!productTitle.equals ( "" )) {
                     Assert.assertTrue ( String.format ( "Product with title %s is not added to the cart" , productTitle ) ,
                             CheckoutPOM.doesItemExist ( productTitle ) );
-                    driver.close();
+//                    driver.close();
 
                 }
             }
