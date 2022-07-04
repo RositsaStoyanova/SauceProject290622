@@ -16,6 +16,6 @@ Examples:
   Scenario: Login with valid username and password
     Given the client is on the login page
     When provides username: "standard_user" and password: "secret_sauce"
-    Then the user is  successfully logged
+    And then should be relocated to product page
 
 
